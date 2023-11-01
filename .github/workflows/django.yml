@@ -24,7 +24,7 @@ jobs:
     - name: Install Dependencies
       run: |
         pip install -r requirements.txt
-    - name: Run server
-      run: |
-        cd my_tennis_club
-        python manage.py runserver
+    - name: Run migrations
+      run: python manage.py migrate
+    - name: Run tests
+      run: python manage.py test
